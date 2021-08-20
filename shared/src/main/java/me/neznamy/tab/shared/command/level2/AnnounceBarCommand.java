@@ -30,7 +30,7 @@ public class AnnounceBarCommand extends SubCommand{
 			return;
 		}
 		if (args.length != 2) {
-			sendMessage(sender, "Usage: /tab announce bar <bar name> <length>");
+			sendMessage(sender, "&cSyntax&8: &3&l/tab announce bar &9<bar name> &3<length>");
 			return;
 		}
 		String barname = args[0];

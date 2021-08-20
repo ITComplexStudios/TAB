@@ -32,7 +32,7 @@ public class ParseCommand extends SubCommand{
 			}
 			sendRawMessage(sender, "Without colors: " + replaced.replace('\u00a7', '&'));
 		} else {
-			sendMessage(sender, "Usage: /tab parse <placeholder>");
+			sendMessage(sender, "&cSyntax&8: &3&l/tab parse &9<placeholder>");
 		}
 	}
 }

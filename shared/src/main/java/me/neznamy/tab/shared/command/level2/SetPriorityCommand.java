@@ -15,12 +15,16 @@ public class SetPriorityCommand extends SubCommand {
     @Override
     public void execute(TabPlayer sender, String[] args) {
         if (args.length != 2) {
-            sendMessage(sender, "Usage: /tab priority set <group> <priority>");
+            sendMessage(sender, "&cSyntax&8: &3&l/tab priority set &9<group> &3<position>");
             return;
         }
         List<String> groups = TAB.getInstance().getConfiguration().getConfig().getStringList("group-sorting-priority-list");
         String group = args[0].toLowerCase();
-        int position = isInteger(args[1]);
+        if (!isInteger(args[1])) {
+            sendMessage(sender, getTranslation("position-is-not-number"));
+            return;
+        }
+        int position = Integer.parseInt(args[1]);
         if (groups.contains(group)) {
             int old_position = groups.indexOf(group);
             if (position == old_position) {

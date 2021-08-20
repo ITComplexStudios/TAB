@@ -30,7 +30,7 @@ public class SendBarCommand extends SubCommand{
 			return;
 		}
 		if (args.length != 3) {
-			sendMessage(sender, "Usage: /tab send bar <player> <bar name> <length>");
+			sendMessage(sender, "&cSyntax&8: &3&l/tab send bar &9<player> &3<bar name> &l<length>");
 			return;
 		}
 		TabPlayer target = TAB.getInstance().getPlayer(args[0]);

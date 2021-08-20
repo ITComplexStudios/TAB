@@ -120,11 +120,12 @@ public abstract class SubCommand {
 		return suggestions;
 	}
 
-	public int isInteger(String num){
+	public boolean isInteger(String num){
 		try{
-			return Integer.parseInt(num);
+			Integer.parseInt(num);
+			return true;
 		}catch (NumberFormatException e){
-			throw new CommandException(ChatColor.translateAlternateColorCodes('&', getTranslation("position-is-not-number")));
+			return false;
 		}
 
 	}

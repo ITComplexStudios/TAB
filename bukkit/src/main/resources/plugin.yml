@@ -1,5 +1,5 @@
-name: ${project.parent.name}
-version: ${project.parent.version}
+name: TAB
+version: 1.2
 author: NEZNAMY
 main: me.neznamy.tab.platforms.bukkit.Main
 api-version: 1.13

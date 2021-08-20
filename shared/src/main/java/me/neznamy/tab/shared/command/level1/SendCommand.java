@@ -31,12 +31,12 @@ public class SendCommand extends SubCommand {
 					sendMessage(sender, getTranslation("no_permission"));
 				}
 			} else {
-				sendMessage(sender, "Usage: /tab send <type> <player> <bar name> <length>");
-				sendMessage(sender, "Currently supported types: &lbar");
+				sendMessage(sender, "&cSyntax&8: &3&l/tab send &9<type> &3<player> &9<bar name> &3<length>");
+				sendMessage(sender, "&8Currently supported types: &7bar");
 			}
 		} else {
 			sendMessage(sender, "Usage: /tab send <type> <player> <bar name> <length>");
-			sendMessage(sender, "Currently supported types: &lbar");
+			sendMessage(sender, "&8Currently supported types: &7bar");
 		}
 	}
 }

@@ -10,19 +10,8 @@ import com.google.common.collect.Sets;
 import me.neznamy.tab.api.TabPlayer;
 import me.neznamy.tab.shared.PropertyUtils;
 import me.neznamy.tab.shared.TAB;
-import me.neznamy.tab.shared.command.level1.AnnounceCommand;
-import me.neznamy.tab.shared.command.level1.BossBarCommand;
-import me.neznamy.tab.shared.command.level1.CpuCommand;
-import me.neznamy.tab.shared.command.level1.DebugCommand;
-import me.neznamy.tab.shared.command.level1.GroupCommand;
-import me.neznamy.tab.shared.command.level1.NTPreviewCommand;
-import me.neznamy.tab.shared.command.level1.ParseCommand;
-import me.neznamy.tab.shared.command.level1.PlayerCommand;
-import me.neznamy.tab.shared.command.level1.PlayerUUIDCommand;
-import me.neznamy.tab.shared.command.level1.ReloadCommand;
-import me.neznamy.tab.shared.command.level1.ScoreboardCommand;
-import me.neznamy.tab.shared.command.level1.SendCommand;
-import me.neznamy.tab.shared.command.level1.SetCollisionCommand;
+import me.neznamy.tab.shared.command.level1.*;
+import me.neznamy.tab.shared.command.level2.ListPriorityCommand;
 
 /**
  * The core command handler
@@ -51,6 +40,7 @@ public class TabCommand extends SubCommand {
 		registerSubCommand(new ReloadCommand());
 		registerSubCommand(new SendCommand());
 		registerSubCommand(new SetCollisionCommand());
+		registerSubCommand(new PriorityCommand());
 		if (tab.isPremium()) {
 			registerSubCommand(new ScoreboardCommand());
 		}
@@ -106,6 +96,8 @@ public class TabCommand extends SubCommand {
 			sendMessage(sender, "      - &7shows CPU usage of the plugin");
 			sendMessage(sender, prefix + command + " group/player <name> remove");
 			sendMessage(sender, "      - &7Clears all data about player/group");
+			sendMessage(sender, prefix+command+" priority <list|set> [group] [position]");
+			sendMessage(sender, "      - &7Set/List tab priority.");
 			sendMessage(sender, "&m                                                                                ");
 		}
 	}

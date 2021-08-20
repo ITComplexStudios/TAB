@@ -48,20 +48,18 @@ public class ScoreboardCommand extends SubCommand {
 		}
 		if (((ITabPlayer)p).getOtherPluginScoreboard() != null) return; //not overriding other plugins
 		boolean silent = args.length >= 3 && args[2].equals("-s");
-		if (args.length >= 1) {
-			switch(args[0]) {
-			case "on":
-				p.setScoreboardVisible(true, !silent);
-				break;
-			case "off":
-				p.setScoreboardVisible(false, !silent);
-				break;
-			case "toggle":
-				p.toggleScoreboard(!silent);
-				break;
-			default:
-				break;
-			}
+		switch(args[0]) {
+		case "on":
+			p.setScoreboardVisible(true, !silent);
+			break;
+		case "off":
+			p.setScoreboardVisible(false, !silent);
+			break;
+		case "toggle":
+			p.toggleScoreboard(!silent);
+			break;
+		default:
+			break;
 		}
 	}
 }

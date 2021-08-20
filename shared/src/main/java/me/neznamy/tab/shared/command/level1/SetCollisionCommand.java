@@ -29,7 +29,7 @@ public class SetCollisionCommand extends SubCommand {
 				sendMessage(sender, "&c\"" + args[1] + "\" is not a valid true/false value");
 			}
 		} else {
-			sendMessage(sender, "&cUsage: /tab setcollision <player> <true/false>");
+			sendMessage(sender, "&cSyntax&8: &3&l/tab setcollision &9<player> &3<true/false>");
 		}
 	}
 }

@@ -17,7 +17,7 @@ public class PriorityCommand extends PropertyCommand {
     @Override
     public void execute(TabPlayer sender, String[] args) {
         if (args.length == 0) {
-            sendMessage(sender, "Usage: /tab priority <set|list> <group>");
+            sendMessage(sender, "&cSyntax&8: &3&l/tab priority &9<set|list>");
             return;
         }
         String arg0 = args[0].toLowerCase();
@@ -29,7 +29,7 @@ public class PriorityCommand extends PropertyCommand {
                 sendMessage(sender, getTranslation("no_permission"));
             }
         } else {
-            sendMessage(sender, "Usage: /tab priority <set|list> <group>");
+            sendMessage(sender, "&cSyntax&8: &3&l/tab priority &9<set|list>");
             ;
         }
     }

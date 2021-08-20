@@ -32,7 +32,7 @@ public class AnnounceScoreboardCommand extends SubCommand{
 			return;
 		}
 		if (args.length != 2) {
-			sendMessage(sender, "Usage: /tab announce scoreboard <scoreboard name> <length>");
+			sendMessage(sender, "&cSyntax&8: &3&l/tab announce scoreboard &9<scoreboard name> &3<length>");
 			return;
 		}
 		String scoreboard = args[0];

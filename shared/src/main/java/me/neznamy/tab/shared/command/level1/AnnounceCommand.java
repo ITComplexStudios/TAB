@@ -24,8 +24,8 @@ public class AnnounceCommand extends SubCommand {
 	@Override
 	public void execute(TabPlayer sender, String[] args) {
 		if (args.length == 0) {
-			sendMessage(sender, "Usage: /tab announce <type> <bar name> <length>");
-			sendMessage(sender, "Currently supported types: &lbar");
+			sendMessage(sender, "&cSyntax&8: &3&l/tab announce &l<type> &3<bar name> &9<length>");
+			sendMessage(sender, "&8Currently supported types: &7bar");
 			return;
 		}
 		String arg0 = args[0].toLowerCase();
@@ -37,8 +37,8 @@ public class AnnounceCommand extends SubCommand {
 				sendMessage(sender, getTranslation("no_permission"));
 			}
 		} else {
-			sendMessage(sender, "Usage: /tab announce <type> <bar name> <length>");
-			sendMessage(sender, "Currently supported types: &lbar");
+			sendMessage(sender, "&cSyntax&8: &3&l/tab announce &9<type> &3<bar name> &9<length>");
+			sendMessage(sender, "&8Currently supported types: &7bar");
 		}
 	}
 }
