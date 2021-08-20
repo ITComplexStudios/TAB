@@ -8,6 +8,9 @@ import java.util.Map;
 import me.neznamy.tab.api.TabPlayer;
 import me.neznamy.tab.shared.PropertyUtils;
 import me.neznamy.tab.shared.TAB;
+import org.bukkit.ChatColor;
+import org.bukkit.command.CommandException;
+
 /**
  * Abstract class representing a subcommand of "/tab" command
  */
@@ -116,6 +119,15 @@ public abstract class SubCommand {
 		}
 		return suggestions;
 	}
+
+	public int isInteger(String num){
+		try{
+			return Integer.parseInt(num);
+		}catch (NumberFormatException e){
+			throw new CommandException(ChatColor.translateAlternateColorCodes('&', getTranslation("position-is-not-number")));
+		}
+
+	}
 	
 	/**
 	 * Performs command complete and returns list of arguments to be shown
@@ -162,7 +174,7 @@ public abstract class SubCommand {
 	 * @param key - message key
 	 * @return translation from file
 	 */
-	public String getTranslation(String key) {
+	public static String getTranslation(String key) {
 		return TAB.getInstance().getConfiguration().getTranslation().getString(key);
 	}
 	
